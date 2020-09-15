@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  position: relative;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  background-color: rgb(39, 38, 38);
+  color: white;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(31, 0, 172);
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 1px rgb(206, 206, 206);
+}
+
+@media screen and (max-width: 882px) {
+  .wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

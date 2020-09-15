@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Table </title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrapper"></div>
+</body>
+
+<script>
+    let content = "";
+    for (let i = 33; i < 128; i++) {
+        content += ` <div class="box">
+                    <h1>${String.fromCharCode(i)}</h1>
+                    <div>
+                        <h4>Hex</h4>
+                        <p>${i.toString(16)}</p>
+                    </div>
+                    <div>
+                        <h4>Octal</h4>
+                        <p>${i.toString(8)}</p>
+                    </div>
+                    <div>
+                        <h4>Bin</h4>
+                        <p>${i.toString(2)}</p>
+                    </div>
+                </div>`
+    }
+    document.querySelector(".wrapper").innerHTML = content;
+</script>
+
+
+</html>
